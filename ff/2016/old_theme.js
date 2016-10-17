@@ -1,8 +1,20 @@
+$(document).ready( 
+		function () {
+    	$('#power_table').DataTable(
+			    { "paging": false,
+				    "info"  : false,
+				     columnDefs:[
+					     { targets:[9],orderData:[9,0]}
+				     ]
+		    	}
+		  );
+	 }
+	 
+);
 $(document).ready(function () {
     $.each($("#power_table tr"), function (i, v) {
         var txt = $(this).find("td:nth-child(10)").text();
-        document.getElementById('debug').innerHTML +=  txt;
-				if (txt == "1") {
+        if (txt == "1") {
             $(this).addClass("row-tier1");
         }else if(txt == "2"){
         	$(this).addClass("row-tier2");
