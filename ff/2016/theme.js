@@ -13,17 +13,16 @@ $(document).ready(function () {
         }else if(txt == "5"){
         	$(this).addClass("row-tier5");
         }
-    });
-});
 
-$(document).ready(function () {
-    	$('#power_table').DataTable(
+    });
+		$('#power_table').DataTable(
 			    { "paging": false,
 				    "info"  : false,
 				     columnDefs:[
 					     { targets:[9],orderData:[9,0]}
 				     ]
 		    	}
-		  );
+		);
+
 });
 
