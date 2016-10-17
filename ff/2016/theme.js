@@ -15,6 +15,7 @@ $(document).ready(function(){
 	 	  var table = document.getElementById("power_table");
 			table.getElementsByTagName("tr").each(function(){
 				  var col_val = $(this).find("td:eq(9)").text();
+					window.alert(col_val);
 					if(col_val == "1"){
 						$(this).addClass('row-tier1');
 					}
