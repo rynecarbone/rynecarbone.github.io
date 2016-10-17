@@ -19,19 +19,23 @@ body {
 .table-borderless tbody tr td, .table-borderless tbody tr th, .table-borderless thead tr th {
 	    border: none;
 }
-
 .row-tier1 {
   background-color: rgba(208, 234, 237, 1);
+background-color: rgba(220, 234, 238, 1);
 }
 .row-tier2 {
 	background-color: rgba(192, 224, 175, 1);
+background-color: rgba(215, 238, 206, 1);
 }
 .row-tier3 {
 	background-color: rgba(211, 210, 143, 1);
+background-color: rgba(238, 235, 192, 1);
 }
 .row-tier4 {
 	background-color: rgba(198, 161, 115, 1);
+background-color: rgba(235, 207, 175, 1);
 }
 .row-tier5 {
 	background-color: rgba(186, 107, 89, 1);
+background-color: rgba(227, 169, 157, 1);
 }
