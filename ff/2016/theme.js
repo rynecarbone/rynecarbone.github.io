@@ -9,7 +9,9 @@ $(document).ready(
 		    	}
 		  );
 	 }
-	 function(){
+	 
+);
+$(document).ready(function(){
 	 	  $("tr").each(function(){
 				  var col_val = $(this).find("td:eq(9)").text();
 					if(col_val == "1"){
