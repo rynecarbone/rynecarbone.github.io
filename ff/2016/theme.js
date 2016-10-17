@@ -14,8 +14,9 @@ $(document).ready(function () {
         	$(this).addClass("row-tier5");
         }
     });
-}
-function () {
+});
+
+$(document).ready(function () {
     	$('#power_table').DataTable(
 			    { "paging": false,
 				    "info"  : false,
@@ -24,6 +25,5 @@ function () {
 				     ]
 		    	}
 		  );
-	 }
-);
+});
 
