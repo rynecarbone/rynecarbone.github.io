@@ -14,5 +14,16 @@ $(document).ready(function () {
         	$(this).addClass("row-tier5");
         }
     });
-});
+}
+function () {
+    	$('#power_table').DataTable(
+			    { "paging": false,
+				    "info"  : false,
+				     columnDefs:[
+					     { targets:[9],orderData:[9,0]}
+				     ]
+		    	}
+		  );
+	 }
+);
 
