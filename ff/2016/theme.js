@@ -4,26 +4,16 @@ $(document).ready(function () {
 				    "info"  : false,
 				     columnDefs:[
 					     { targets:[9],orderData:[9,0]}
-				     ]
+				     ],
+						 "fnRowCallback": function(nRow, aData, iDisplayIndex, iDisplayIndexFull){
+								if( aData[9] == "1"){$('td', nRow).addClass('row-tier1'); } 
+								else if( aData[9] == "2"){$('td', nRow).addClass('row-tier2'); } 
+								else if( aData[9] == "3"){$('td', nRow).addClass('row-tier3'); } 
+								else if( aData[9] == "4"){$('td', nRow).addClass('row-tier4'); } 
+								else if( aData[9] == "5"){$('td', nRow).addClass('row-tier5'); } 
+						}
 		    	}
 		);
-
-		$.each($("#power_table tr"), function (i, v) {
-        var txt = $(this).find("td:nth-child(10)").text();
-        document.getElementById('debug').innerHTML +=  txt;
-				if (txt == "1") {
-            $(this).addClass("row-tier1");
-        }else if(txt == "2"){
-        	$(this).addClass("row-tier2");
-        }else if(txt == "3"){
-        	$(this).addClass("row-tier3");
-        }else if(txt == "4"){
-        	$(this).addClass("row-tier4");
-        }else if(txt == "5"){
-        	$(this).addClass("row-tier5");
-        }
-
-    });
 		
 });
 
