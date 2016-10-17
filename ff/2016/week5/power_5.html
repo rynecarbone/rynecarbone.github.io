@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="Fantasy Football Power Rankings">
+    <meta name="author" content="Ryne Carbone">
     <link rel="icon" href="../../favicon.ico">
 
     <title>Gypsymen Fantasy Rankings</title>
@@ -15,15 +15,11 @@
     <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap theme -->
     <link href="../../dist/css/bootstrap-theme.min.css" rel="stylesheet">
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="theme.css" rel="stylesheet">
-
-    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+    <!-- Sortable datatables -->
+		<link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.12/css/jquery.dataTables.css">
+    
+		<!-- Custom styles for this template -->
+    <link href="../theme.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -57,9 +53,9 @@
                 <li><a href="#">Adam Kachelski</a></li>
                 <li><a href="#">Brian Kohlman</a></li>
                 <li><a href="#">Chris Pom</a></li>
+                <li><a href="#">John Cronin</a></li>
                 <li><a href="#">Jordan Hardy</a></li>
-                <li><a href="#">JP</a></li>
-                <li><a href="#">Mefffff</a></li>
+                <li><a href="#">Meff Shulz</a></li>
                 <li><a href="#">Monica Cooley</a></li>
                 <li><a href="#">Steve Kamke</a></li>
 								<li><a href="#">Stuart Frazier</a></li>
@@ -92,22 +88,23 @@
       </div>
       <div class="row">
         <div class="col-md-12">
-          <table class="table table-striped">
+          <table id="example" class="table table-striped">
             <thead>
               <tr>
                 <th>#</th>
                 <th>Owner</th>
+                <th>Record</th>
 								<th>Power</th>
                 <th>LSQ</th>
                 <th>2SD</th>
                 <th>Colley</th>
                 <th>SOS</th>
-                <th>AWP</th>
-                <th>Record</th>
+                <th>Luck</th>
+                <th>Tier</th>
               </tr>
             </thead>
             <tbody>
-<tr><td>1</td><td>Adam Kachelski</td><td>89.521</td><td>89.521</td><td>26.750</td><td>0.691</td><td>29.624</td><td>0.600</td><td>4-1</td></tr><tr><td>2</td><td>Chris Pom</td><td>86.999</td><td>86.999</td><td>27.000</td><td>0.691</td><td>18.611</td><td>0.533</td><td>4-1</td></tr><tr><td>3</td><td>Ryne Carbone</td><td>64.166</td><td>64.166</td><td>25.600</td><td>0.566</td><td>50.809</td><td>0.711</td><td>3-2</td></tr><tr><td>4</td><td>John Cronin</td><td>57.883</td><td>57.883</td><td>24.850</td><td>0.546</td><td>25.104</td><td>0.622</td><td>3-2</td></tr><tr><td>5</td><td>Jeff Schulz</td><td>48.668</td><td>48.668</td><td>23.950</td><td>0.557</td><td>31.711</td><td>0.622</td><td>3-2</td></tr><tr><td>6</td><td>Stuart Frazier</td><td>36.958</td><td>36.958</td><td>21.050</td><td>0.443</td><td>47.078</td><td>0.600</td><td>2-3</td></tr><tr><td>7</td><td>Brian Kohlman</td><td>24.251</td><td>24.251</td><td>18.500</td><td>0.348</td><td>100.000</td><td>0.378</td><td>1-4</td></tr><tr><td>8</td><td>Monica Cooley</td><td>17.555</td><td>17.555</td><td>20.150</td><td>0.435</td><td>44.445</td><td>0.378</td><td>2-3</td></tr><tr><td>9</td><td>jordan hardy</td><td>14.417</td><td>14.417</td><td>19.450</td><td>0.291</td><td>28.884</td><td>0.378</td><td>1-4</td></tr><tr><td>10</td><td>Steve Kamke</td><td>10.408</td><td>10.408</td><td>18.350</td><td>0.431</td><td>39.002</td><td>0.178</td><td>2-3</td></tr>						</tbody>
+<tr><td>1</td><td>Adam Kachelski   <span class="text-success"><span class="glyphicon glyphicon-chevron-up"></span> 1</span></td><td>4-1</td><td>98.185</td><td>0.946</td><td>1.730</td><td>0.691</td><td>0.959</td><td>1.136</td><td>1</td></tr><tr><td>2</td><td>Chris Pom   <span class="text-danger"><span class="glyphicon glyphicon-chevron-down"></span> 1</span></td><td>4-1</td><td>97.830</td><td>0.940</td><td>1.705</td><td>0.691</td><td>0.636</td><td>1.221</td><td>1</td></tr><tr><td>3</td><td>Ryne Carbone</td><td>3-2</td><td>94.033</td><td>0.857</td><td>1.034</td><td>0.566</td><td>1.075</td><td>0.919</td><td>2</td></tr><tr><td>4</td><td>John Cronin   <span class="text-success"><span class="glyphicon glyphicon-chevron-up"></span> 4</span></td><td>3-2</td><td>93.315</td><td>0.820</td><td>1.209</td><td>0.546</td><td>0.654</td><td>1.006</td><td>2</td></tr><tr><td>5</td><td>Meff Shulz   <span class="text-danger"><span class="glyphicon glyphicon-chevron-down"></span> 1</span></td><td>3-2</td><td>92.276</td><td>0.750</td><td>1.082</td><td>0.557</td><td>0.806</td><td>0.989</td><td>2</td></tr><tr><td>6</td><td>Stuart Frazier   <span class="text-danger"><span class="glyphicon glyphicon-chevron-down"></span> 1</span></td><td>2-3</td><td>89.472</td><td>0.629</td><td>0.704</td><td>0.443</td><td>1.151</td><td>0.862</td><td>3</td></tr><tr><td>7</td><td>Brian Kohlman</td><td>1-4</td><td>88.150</td><td>0.450</td><td>0.434</td><td>0.348</td><td>1.971</td><td>0.782</td><td>3</td></tr><tr><td>8</td><td>Monica Cooley   <span class="text-danger"><span class="glyphicon glyphicon-chevron-down"></span> 2</span></td><td>2-3</td><td>83.426</td><td>0.337</td><td>0.812</td><td>0.435</td><td>0.892</td><td>1.038</td><td>4</td></tr><tr><td>9</td><td>Steve Kamke   <span class="text-success"><span class="glyphicon glyphicon-chevron-up"></span> 1</span></td><td>2-3</td><td>80.062</td><td>0.205</td><td>0.925</td><td>0.431</td><td>0.985</td><td>1.593</td><td>4</td></tr><tr><td>10</td><td>Jordan Hardy   <span class="text-danger"><span class="glyphicon glyphicon-chevron-down"></span> 1</span></td><td>1-4</td><td>76.174</td><td>0.281</td><td>0.366</td><td>0.291</td><td>0.871</td><td>0.773</td><td>5</td></tr>						</tbody>
           </table>
         </div>
       </div>
@@ -139,8 +136,13 @@
 						<td> Relative strength of schedule, scaled to hardest schedule</td>
 					</tr>
       		<tr>
-					  <td><b>AWP</b> </td>
-						<td>Aggregate winning percentage</td>
+					  <td><b>Luck</b> </td>
+						<td>Luck index factors opponents score and aggregrate wins </td>
+					</tr>
+					<tr>
+						<td><b>Tier</b></td>
+						<td>Clustering by finding minima in Gaussian Kernal Density Estimation
+					</tr>
 				</table>
 			</div>
     
@@ -153,8 +155,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
     <script src="../../dist/js/bootstrap.min.js"></script>
-    <script src="../../assets/js/docs.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+		<script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.12/js/jquery.dataTables.js"></script>
+		<script type="text/javascript"> $(document).ready( function () {
+			    $('#example').DataTable();
+		} ); </script>
+
   </body>
 </html>
