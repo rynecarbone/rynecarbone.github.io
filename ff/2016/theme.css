@@ -20,7 +20,7 @@ body {
 	    border: none;
 }
 
-.table .table-striped > tbody > tr > td .row-tier1 {
+.table .table-striped > tbody > tr > .row-tier1 td{
   background-color: rgba(208, 234, 237, 1);
 }
 .row-tier2 {
