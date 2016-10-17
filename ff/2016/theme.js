@@ -1,5 +1,14 @@
 $(document).ready(function () {
-    $.each($("#power_table tr"), function (i, v) {
+    $('#power_table').DataTable(
+			    { "paging": false,
+				    "info"  : false,
+				     columnDefs:[
+					     { targets:[9],orderData:[9,0]}
+				     ]
+		    	}
+		);
+
+		$.each($("#power_table tr"), function (i, v) {
         var txt = $(this).find("td:nth-child(10)").text();
         document.getElementById('debug').innerHTML +=  txt;
 				if (txt == "1") {
@@ -15,14 +24,6 @@ $(document).ready(function () {
         }
 
     });
-		$('#power_table').DataTable(
-			    { "paging": false,
-				    "info"  : false,
-				     columnDefs:[
-					     { targets:[9],orderData:[9,0]}
-				     ]
-		    	}
-		);
-
+		
 });
 
