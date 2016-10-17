@@ -14,7 +14,6 @@ $(document).ready(
 $(document).ready(function () {
     $.each($("#power_table tr"), function (i, v) {
         var txt = $(this).find("td:nth-child(10)").text();
-        document.getElementById('output').innerHTML = txt;
         if (txt == "1") {
             $(this).addClass("row-tier1");
         }else if(txt == "2"){
