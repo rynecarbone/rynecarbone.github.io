@@ -16,6 +16,14 @@ body {
 .theme-showcase .navbar .container {
   width: auto;
 }
+.table-center td{
+		text-align: center;
+}
+.vertical-center {
+		display: flex;
+		align-items: center;
+		flex-flow: wrap;
+}
 .table-borderless tbody tr td, .table-borderless tbody tr th, .table-borderless thead tr th {
 	    border: none;
 }
