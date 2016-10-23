@@ -1,6 +1,7 @@
 body {
   padding-top: 70px;
   padding-bottom: 30px;
+	counter-reset: footnotecounter;
 }
 
 .theme-dropdown .dropdown-menu {
@@ -41,4 +42,14 @@ body {
 }
 .row-tier5 {
 	background-color: rgba(227, 169, 157, 1);
+}
+span.footnote:before {
+  counter-increment: footnotecounter;
+	content: counter(footnotecounter);
+	position: relative;
+	top: -0.4em;
+}
+
+span.footnote {
+	color: #24B1E6;
 }
