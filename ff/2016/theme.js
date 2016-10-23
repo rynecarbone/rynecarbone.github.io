@@ -2,8 +2,8 @@ $(document).ready(function () {
     $('#power_table').DataTable(
 			    { "paging": false,
 				    "info"  : false,
-						"responsive" : { details: {display: $.fn.dataTable.Responsive.display.childRowImmediate}},
-						"columnDefs" : [
+						responsive : { details: {display: $.fn.dataTable.Responsive.display.childRowImmediate}},
+						columnDefs : [
 					     { targets:[9],orderData:[9,0]}
 				     ],
 						 "fnRowCallback": function(nRow, aData, iDisplayIndex, iDisplayIndexFull){
