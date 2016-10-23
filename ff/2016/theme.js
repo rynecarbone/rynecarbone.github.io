@@ -1,9 +1,8 @@
 $(document).ready(function () {
     $('#power_table').DataTable(
 			    { "paging": false,
-				    "info"  : false,
-						"responsive" : true,
-						columnDefs : [
+				    "info"  : false,						
+					  columnDefs : [
 					     { targets:[9],orderData:[9,0]}
 				     ],
 						 "fnRowCallback": function(nRow, aData, iDisplayIndex, iDisplayIndexFull){
