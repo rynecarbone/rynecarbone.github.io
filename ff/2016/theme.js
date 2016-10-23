@@ -2,7 +2,7 @@ $(document).ready(function () {
     $('#power_table').DataTable(
 			    { "paging": false,
 				    "info"  : false,
-						responsive : { details: {display: $.fn.dataTable.Responsive.display.childRowImmediate}},
+						"responsive" : true,
 						columnDefs : [
 					     { targets:[9],orderData:[9,0]}
 				     ],
