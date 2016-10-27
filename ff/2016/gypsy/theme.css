@@ -25,6 +25,26 @@ body {
 		align-items: center;
 		flex-flow: wrap;
 }
+.bigger {
+	font-size: 16px;
+	line-height: 165%;
+}
+.bigger > p{
+	max-width: 700px;
+	margin-bottom: 1.5em;
+}
+.bigger > ul{
+	list-style-type:none;
+	margin-bottom: 1.5em;
+}
+.bigger > ul > li:before {
+	content: "\e080";
+	font-family: 'Glyphicons Halflings';
+	font-size: 16px;
+	position: relative;
+	margin-right: 1em;
+	top: 3px;
+}
 .table-borderless tbody tr td, .table-borderless tbody tr th, .table-borderless thead tr th {
 	    border: none;
 }
@@ -50,6 +70,6 @@ span.footnote:before {
 	top: -0.4em;
 }
 
-span.footnote {
+span.footnote{
 	color: #24B1E6;
 }
