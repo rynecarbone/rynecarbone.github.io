@@ -80,23 +80,23 @@
 							<span></span>
 						</div>
       	</div>
-    	</div>
-		
+      </div>
+
 		<div id="ranking_explanation" class="bigger col-md-12">
-		
+
 		<div class="page-header">
 			<h1>LSQ</h1>
 		</div>
 		<p>This is where explain LSQ when I have time to write it <span class='footnote' data-toggle="tooltip" title="Affogato bushwick irony tacos, kitsch etsy tousled distillery <a href='http://www.intelligentsiacoffee.com/'>intelligentsia</a> tattooed photo booth trust fund synth letterpress hashtag 8-bit."></span>
 		. Generally speaking it uses score differential and an iterative process to derive ranking scores by minimizing a chi square metric.</p>
-		
+
 		<div class="page-header">
 			<h1>2SD</h1>
 		</div>
 		<p>The Two Step Dominace Matrix Method<span class='footnote' data-toggle="tooltip" title="Some examples of using a <a href='http://directorymathsed.net/download/Thomas.pdf'>Dominance Matrix</a>"></span>
 		is based on directed graphs. I am currently exploring a more sophisticated version much like
 		the PageRank algorithm<span class='footnote' data-toggle="tooltip" title="Generalizing PageRank to rank NFL teams discussed <a href='http://www2.sas.com/proceedings/forum2008/151-2008.pdf'>here</a>."></span> <span class='footnote' data-toggle="tooltip" title="Another discussion on PageRank for NFL rankings <a href='https://www.ncsu.edu/crsc/reports/ftp/pdf/crsc-tr06-19.pdf'>here</a>."></span>
-		Google developed to rank importance of websites. 
+		Google developed to rank importance of websites.
 		</p>
 		For now I will go over a simplified 2SD: let us assume there are 6 teams in the league, labeled A-F. If team A beats team B,
 		we draw an arrow from A to B. Consider the graph below after 3 games:
@@ -106,15 +106,15 @@
 		</div>
 		<p> We can store this information in a matrix where entry $d_{ij}=1$ if team $i$ beats
 		team $j$. For this example we have:
-		$$\begin{align}&&&\quad \text{Opposing Team} \nonumber\\ 
+		$$\begin{align}&&&\quad \text{Opposing Team} \nonumber\\
 		&&& \begin{matrix}A&B&C&D&E&F\end{matrix} \nonumber\\
-		D_{1}&=&\begin{matrix}A\\B\\C\\D\\E\\F\end{matrix} &  
+		D_{1}&=&\begin{matrix}A\\B\\C\\D\\E\\F\end{matrix} &
 		 \begin{bmatrix} 0 & 1 &0 & 0 & 1 &0 \\
 										 0 & 0 & 0 &1 & 0  &1 \\
 										 1 & 0 & 0 &0 & 1  &0 \\
 										 0 & 0 & 1 &0 & 0  &0 \\
 										 0 & 0 & 0 &0 & 0  &1 \\
-										 0 & 0 & 0 &1 & 0  &0 \end{bmatrix} 
+										 0 & 0 & 0 &1 & 0  &0 \end{bmatrix}
 		\end{align}
 		$$</p>
 
@@ -123,23 +123,23 @@
 		team $j$. In our example diagram, there are two paths from A to F, so the
 		component $m_{AF}=2$. Instead of counting lines, an easier approach is to simply square our first order dominance matrix.
 		Continuing our example this gives:
-		$$\begin{align}&&&\quad \text{Opposing Team} \nonumber\\ 
+		$$\begin{align}&&&\quad \text{Opposing Team} \nonumber\\
 		&&& \begin{matrix}A&B&C&D&E&F\end{matrix} \nonumber\\
-		D_{2}&=&\begin{matrix}A\\B\\C\\D\\E\\F\end{matrix} &  
+		D_{2}&=&\begin{matrix}A\\B\\C\\D\\E\\F\end{matrix} &
 		 \begin{bmatrix} 0 & 0 &0 & 1 & 0  &2 \\
 										 0 & 0 & 1 &1 & 0  &0 \\
 										 0 & 1 & 0 &0 & 1  &1 \\
 										 1 & 0 & 0 &0 & 1  &0 \\
 										 0 & 0 & 0 &1 & 0  &0 \\
-										 0 & 0 & 1 &0 & 0  &0 \end{bmatrix} 
+										 0 & 0 & 1 &0 & 0  &0 \end{bmatrix}
 		\end{align}
 		$$
 		</p>
-		<p>The two step dominance method adds the first and second order dominance matrices, $\alpha_1D_1+\alpha_2D_2$, 
+		<p>The two step dominance method adds the first and second order dominance matrices, $\alpha_1D_1+\alpha_2D_2$,
 		and then sums the rows in the resulting matrix. The sum represents the overall dominance score for the team
 		corresponding to that row. Using $\alpha_1=1, \alpha_2=0.5$, our example becomes:
 		$$\begin{align}
-		D_{1}+0.5D_2\quad&=&\begin{matrix}A\\B\\C\\D\\E\\F\end{matrix} &  
+		D_{1}+0.5D_2\quad&=&\begin{matrix}A\\B\\C\\D\\E\\F\end{matrix} &
 		 \begin{bmatrix} 0 & 1 &0 & 0.5 & 1 &1 \\
 										 0 & 0 & 0.5 &1.5 & 0  &1 \\
 										 1 & 0.5 & 0 &0 & 1.5  &0.5 \\
@@ -147,7 +147,7 @@
 										 0 & 0 & 0 &0.5 & 0  &1 \\
 										 0 & 0 & 0.5 &1 & 0  &0 \end{bmatrix}\nonumber\\&&& \nonumber\\
 										 \overset{\mbox{Sum rows}}{\longrightarrow} && \begin{matrix}A\\B\\C\\D\\E\\F\end{matrix}
-										& \begin{bmatrix}3.5\\3\\3.5\\2\\1.5\\1.5\end{bmatrix} \nonumber 
+										& \begin{bmatrix}3.5\\3\\3.5\\2\\1.5\\1.5\end{bmatrix} \nonumber
 		\end{align}
 		$$
 		</p>
@@ -162,38 +162,38 @@
 			<h1>Colley</h1>
 		</div>
 		<p>The Colley Matrix method<span class='footnote' data-toggle="tooltip" title="Read a detailed explanation by <a href='http://www.colleyrankings.com/matrate.pdf'>Colley himself</a>"></span> was originally developed to rank college football teams in an unbiased, open source way. Most notably, it tries to:</p>
-		
-		<ul> 
+
+		<ul>
 			<li>Use minimal assumptions</li>
 			<li>Address strength of schedule</li>
 			<li>Ignore blowouts</li>
 			<li>Produce common sense results</li>
 		</ul>
-		
-		<p>The Colley Matrix only factors in wins and losses. In college football, 
-				the motivation is to combat the tendancy for teams to run up the score 
-				to improve their rankings. In fantasy football, if you're not running up 
-				the score, you're not playing the game. In that sense, the Colley rankings 
-				may be incomplete when it comes to fantasy; nevertheless, it can still offer 
+
+		<p>The Colley Matrix only factors in wins and losses. In college football,
+				the motivation is to combat the tendancy for teams to run up the score
+				to improve their rankings. In fantasy football, if you're not running up
+				the score, you're not playing the game. In that sense, the Colley rankings
+				may be incomplete when it comes to fantasy; nevertheless, it can still offer
 				a useful metric. Since every team plays a different schedule, factoring wins
-				and losses should also somehow account for the quality of those wins and 
+				and losses should also somehow account for the quality of those wins and
 				losses.</p>
-		
+
 		<p>To begin, instead of a simple winning percentage, a rankings metric
 		is defined by:
 		$$\begin{equation} r = \frac{1+n_w}{2+n_{tot}}\label{eq:r} \end{equation}$$
 		with $n_w, n_{tot}$ designating the number of wins and total number of games
-		respectively. This is especially important for early season rankings where 
+		respectively. This is especially important for early season rankings where
 		winning percentages of 0% and 100% offer little comparative insight. The idea
 		is that everyone starts with $r=\frac{1}{2}$, and with each game the ranking adjusts
-		according to the result in a bayesian manner. 
+		according to the result in a bayesian manner.
 		</p>
 
 		<p>To account for strength of schedlue, the rankings metric in \eqref{eq:r} can be
 		utilized. Consider rewriting the number of wins for team $i$ as:
-		$$\begin{align} 
+		$$\begin{align}
 			n_{w,i}\quad & = &\frac{n_{w,i}-n_{l,i}}{2} +\frac{n_{tot,i}}{2}\nonumber \\
-		          & = &\frac{n_{w,i}-n_{l,i}}{2} +\sum^{n_{tot,i}}\frac{1}{2}\nonumber\\ 
+		          & = &\frac{n_{w,i}-n_{l,i}}{2} +\sum^{n_{tot,i}}\frac{1}{2}\nonumber\\
 			\end{align}$$
 		If we recognize that sum as the sum of the rankings of team $i$'s opponents, we can
 		write down an effective number of wins which accounts for strength of schedule:
@@ -211,33 +211,33 @@
 		We see that $\vec{b}$ in equation \eqref{eq:mat} is a column vector consisting of the right hand side of equation \eqref{eq:sys_eq},
 		and $\vec{r}$ is a column vector of all the ratings. The Colley matrix, $C$, has elements:
 		$$c_{ii}\quad = \quad 2+n_{tot,i}\\ c_{ij}\quad=\quad -n_{ji}$$
-		where $n_{ji}$ is the number of times team $i$ has played team $j$. The rankings vector, $\vec{r}$, 
+		where $n_{ji}$ is the number of times team $i$ has played team $j$. The rankings vector, $\vec{r}$,
 		can be solved numerically rather easily since $C$ is real, symmetric and positive definite.
 		</p>
-		
+
 		<div class="page-header">
 			<h1>SOS</h1>
 		</div>
 		<p>There are a few ways to determine strength of schedule. Colley already attempts to address this
 		in some form, but I chose to create an explicit metric for SOS<span class='footnote' data-toggle="tooltip" title="Simple, straightforward discussion at <a href='http://www.laxpower.com/update16/ex_sos.php'>LaCrosse Power Index</a>"></span>.
-		Since we have a few ratings metrics available already, I chose to calculate strength of 
+		Since we have a few ratings metrics available already, I chose to calculate strength of
 		schedule by weighing your opponent's LSQ ranking.
 		$$\begin{equation}S\quad=\quad \frac{1}{n_{g}}\sum_i^{n_g}\left( R_{lsq,i} \right)^{\beta_{w}} \end{equation}$$
 		where the exponent $\beta_w$ is chosen to give more weight to harder opponents. The final $S$ values are
 		scaled so that the average team has $S=1$.
-	</p>	
+	</p>
 		<div class="page-header">
 			<h1>Luck</h1>
 		</div>
 
 		<p>The luck index is an original metric that tries to account for two common concerns:</p>
-		<ul>	
+		<ul>
 			<li>An opponent scoring above their average when playing you</li>
 			<li>Outscoring teams you aren't playing</li>
 		</ul>
 		<p>To address the first point, I calculate an average opponent performance index:
 		$$P_{opp}\quad=\quad \frac{1}{n_g}\sum_{i}^{n_g}\frac{s_{opp,i}}{\lt{s_{opp,i}}\gt}$$
-		where $s_{opp,i}$ is the score of your $i^{\rm th}$ opponent, and $\lt s_{opp,i}\gt$ 
+		where $s_{opp,i}$ is the score of your $i^{\rm th}$ opponent, and $\lt s_{opp,i}\gt$
 		is your $i^{\rm th}$ opponent's average score.
 		</p>
 
@@ -253,9 +253,9 @@
 		$$\begin{equation}L\quad = \quad \alpha_{P}\frac{1}{P_{opp}}+\alpha_{W}W_{\rm index}\end{equation}$$
 		such that a team with average luck has $L=1$, and a team with above average luck
 		has $L\gt 1$.
-		</p> 
-		
-		
+		</p>
+
+
 		<div class="page-header">
 			<h1>Power</h1>
 		</div>
@@ -279,16 +279,16 @@
 		</div>
 		<p>To determine the tiers, I use Gaussian Kernel Density Estimation (KDE)<span class='footnote' data-toggle="tooltip" title="Wikipedia with way too much detail on <a href='https://en.wikipedia.org/wiki/Kernel_density_estimation'>Gaussian Kernel Density Estimation</a>"></span>.
 		Given a list of overall power scores, the KDE attempts to create a smooth probability density funciton.
-		By looking for minima in the KDE, it is possible to identify separated clusters of rankings. 
+		By looking for minima in the KDE, it is possible to identify separated clusters of rankings.
 		</p>
 		<p>The KDE method is highly sensitive to the specified bandwidth: the range over which the KDE is allowed to vary. If the bandwidth
-		is too large, there is oversmoothing, too small and each data point will be isolated. From week to week I try to 
+		is too large, there is oversmoothing, too small and each data point will be isolated. From week to week I try to
 		select a bandwidth that produces 3-6 tiers. An example output of the KDE method is shown below:
 		</p>
 		<div class="col-md-12">
 		<img src="tiers_example.png" class="img-thumbnail col-md-6" alt="tiers KDE"></img>
 		</div>
-			
+
 	</div> <!-- /rankings explanation -->
   </div> <!-- /container -->
 
