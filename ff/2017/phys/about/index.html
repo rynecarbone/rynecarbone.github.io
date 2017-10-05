@@ -82,6 +82,35 @@
 		the scores of the two teams playing: $S_h$ (score, home team), and $S_a$ (score, away team). The score difference, $\Delta S_{ha}$,
 		is used to characterize the result. To protect against anomolously large score differences, a truncated score difference is defined:
 		$$\Delta S_{trunc} = \Delta S_{max}\text{tanh}\left(\frac{\Delta S_{ha}}{\Delta S_{max}}\right)$$
+		where $\Delta S_{trunc}\simeq \Delta S_{ha}$ for small values of $\Delta S_{ha}$, and $\Delta S_{trunc}\simeq \Delta S_{max}$ for large
+		values of $\Delta S_{ha}$.
+		</p>
+
+		<p>In the end, winnning a game is important with respect to making the playoffs. A win bonus, $B_w$, is added to the result, $R_g$.
+		Finally, a score ratio is included to scale the margin of victory, and give a better indication of how close the game was:
+		$$\frac{\Delta S_{ha}}{S_w}$$
+		where $S_{w}$ is the score of the winning team. This is weighted with a score ratio weight, $B_{r}$, so that the final result function is:
+		$$R_{g}(S_{h}, S_{a} | B_{w}, \Delta S_{max}, B_{r}) =  B_{w}+ \Delta S_{trunc} + B_{r}\frac{\Delta S_{ha}}{S_{w}}$$
+		</p>
+
+		<p>A prediction function, $P_{g}(r_h, r_a)$, for game $g$, tries to estimate $R_g$ based on the rankings of the home team ($r_h$) and away team ($r_a$):
+		$$P_g(r_h,r_a) = r_h - r_a =  \sum_{i=1}^{i=N_t}\delta_{gt}r_t, \text{where} \delta_{gt} =  \begin{cases}
+		      1, & \text{if}\ t=h \\
+					      -1, & \text{if}\ t=a\\
+								0 & \text{if}\ t\neq h,a
+								    \end{cases}$$
+		where $P_g$ is assumed to depend linearly on the team rankings.
+		If the season has $N_g$ games, and there are $N_t$ teams, there will be $N_g$ measurements of the $N_t$ rankings ($\vec{r}$) during the season. A chi square
+		function is used to minimize the difference betweent he prediciton function and the result funciton:
+		$$\chi^2(\vec{r}) = \sum_{g=1}^{N_g}\left[\frac{R_g(\vec{\alpha}) - P_g(\vec{r})}{\sigma_g} \right] = \sum_{g=1}^{N_g}\left[\frac{R_g(\vec{\alpha}) - \sum_{t=1}^{N_t}\delta_{gt}r_t}{\sigma_g} \right]$$
+		where $\sigma_g$ is the measurement error for each game.		</p>
+
+		<p>  A design matrix, $A_{gt}$, is identified:
+		$$A_{gt} = \frac{\delta_{gt}}{\sigma_g}$$
+    A weighted result vector, $b_g$, is identified:
+		$$b_g = \frac{R_g}{\sigma_g}$$
+		The ranking strength parameter, $\vec{r}$, is thus solved for using the least square minimization of the matrix equation:
+		$$\chi^2 = |A\cdot r - b|^2$$
 		</p>
 
 		<div class="page-header">
