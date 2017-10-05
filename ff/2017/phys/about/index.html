@@ -113,6 +113,16 @@
 		$$\chi^2 = |A\cdot r - b|^2$$
 		</p>
 
+		<p> A game between two teams of approximately equal rank will yield a good measurement of the true ranks, so a larger weight
+		is applied to these games. The chi square minimization is done iteratively: initially the weights, $w_g$, are set the same for each team:
+		$$w_g^{(1)} = \frac{1}{\sigma_g^2} = 1$$
+		During the second iteration, the weights are set such that:
+		$$w_g^{(2)} = \text{exp}\left(-\frac{|r_h-r_a|}{\alpha_w}\right)$$
+		where $\alpha_w$ is determined by:
+		$$\text{exp}\left(-\frac{\text{max}(r_t)-\text{min}(r_t)}{\alpha_w}\right) = \frac{1}{\beta_w^2}$$
+		A game between the best and worst team has a measurement error $\beta_w$ times larger than when two equally ranked teams play.
+		</p>
+
 		<div class="page-header">
 			<h1>2SD</h1>
 		</div>
