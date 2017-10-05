@@ -90,11 +90,11 @@
 		Finally, a score ratio is included to scale the margin of victory, and give a better indication of how close the game was:
 		$$\frac{\Delta S_{ha}}{S_w}$$
 		where $S_{w}$ is the score of the winning team. This is weighted with a score ratio weight, $B_{r}$, so that the final result function is:
-		$$R_{g}(S_{h}, S_{a} | B_{w}, \Delta S_{max}, B_{r}) =  B_{w}+ \Delta S_{trunc} + B_{r}\frac{\Delta S_{ha}}{S_{w}}$$
+		$$R_{g}(S_{h}, S_{a} |B_{w}, \Delta S_{max}, B_{r}) =  B_{w}+ \Delta S_{trunc} + B_{r}\frac{\Delta S_{ha}}{S_{w}}$$
 		</p>
 
 		<p>A prediction function, $P_{g}(r_h, r_a)$, for game $g$, tries to estimate $R_g$ based on the rankings of the home team ($r_h$) and away team ($r_a$):
-		$$P_g(r_h,r_a) = r_h - r_a =  \sum_{i=1}^{i=N_t}\delta_{gt}r_t, \text{where} \delta_{gt} =  \begin{cases}
+		$$P_g(r_h,r_a) = r_h - r_a =  \sum_{i=1}^{i=N_t}\delta_{gt}r_t, \text{where}\ \delta_{gt} =  \begin{cases}
 		      1, & \text{if}\ t=h \\
 					      -1, & \text{if}\ t=a\\
 								0 & \text{if}\ t\neq h,a
@@ -337,7 +337,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="../../dist/js/bootstrap.min.js"></script>
 		<script type="text/x-mathjax-config"> MathJax.Hub.Config({displayAlign: "left", displayIndent: "2em",TeX: { equationNumbers: { autoNumber: "AMS" } }, tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});</script>
-		<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+		<!--<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>-->
 		<script src="../about.js"> </script>
   </body>
 </html>
