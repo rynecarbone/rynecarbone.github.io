@@ -70,22 +70,19 @@
 			</div>
 
 
-      <div class="alert alert-warning" role="alert">
- 					<strong>Warning!</strong> Under construction, please come back soon
-       		<div class="progress">
-        		<div class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100" style="width: 33%">
-							<span></span>
-						</div>
-      	</div>
-      </div>
-
 		<div id="ranking_explanation" class="bigger col-md-12">
 
 		<div class="page-header">
 			<h1>LSQ</h1>
 		</div>
-		<p>This is where explain LSQ when I have time to write it <span class='footnote' data-toggle="tooltip" title="Linear Win Difference Ratio method for predictive power rankings <a href='http://www.phys.utk.edu/sorensen/ranking/Documentation/Sorensen_documentation_v1.pdf'>here</a>."></span>
-		. Generally speaking it uses score differential and an iterative process to derive ranking scores by minimizing a chi square metric.</p>
+		<p>The Least Squares (LSQ) ranking is a predictive metric based on the linear-win-difference-ratio method<span class='footnote' data-toggle="tooltip" title="Linear Win Difference Ratio method for predictive power rankings <a href='http://www.phys.utk.edu/sorensen/ranking/Documentation/Sorensen_documentation_v1.pdf'>here</a>."></span>
+		. Generally speaking, it uses score differential and an iterative process to derive ranking scores by minimizing a chi square metric.</p>
+
+		<p>The goal of the rankings is to create a prediction for the result, $R_{g}$, of each game, $g$. The result should only depend on
+		the scores of the two teams playing: $S_h$ (score, home team), and $S_a$ (score, away team). The score difference, $\Delta S_{ha}$,
+		is used to characterize the result. To protect against anomolously large score differences, a truncated score difference is defined:
+		$$\Delta S_{trunc} = \Delta S_{max}\text{tanh}\left(\frac{\Delta S_{ha}}{\Delta S_{max}}\right)$$
+		</p>
 
 		<div class="page-header">
 			<h1>2SD</h1>
@@ -221,7 +218,7 @@
 		in some form, but the power rankings include an explicit metric for SOS<span class='footnote' data-toggle="tooltip" title="Simple, straightforward discussion at <a href='http://www.laxpower.com/update16/ex_sos.php'>LaCrosse Power Index</a>"></span>.
 		Since a few ranking metrics are available already, strength of
 		schedule is calculated by weighing a team's opponent's LSQ ranking.
-		$$\begin{equation}S\quad=\quad \frac{1}{n_{g}}\sum_i^{n_g}\left( R_{lsq,i} \right)^{\beta_{w}} \end{equation}$$
+		$$\begin{equation}R_{sos}\quad=\quad \frac{1}{n_{g}}\sum_i^{n_g}\left( R_{lsq,i} \right)^{\beta_{w}} \end{equation}$$
 		where the exponent $\beta_w$ is chosen to give more weight to harder opponents. A value of 2.37 is chosen as it 
 		offers adequate separation between playing easier and harder opponents.
 	</p>
@@ -267,9 +264,12 @@
 		$$R_{cons} = s_{min}+s_{max}+s_{avg}$$
 		where $s_{min}, s_{max}, s_{avg}$ are a team's minimum, maximum, and average scores for the season.
 		</p>
+		<p>Each of the component rankings are normalized so they can be weighted in a straight forward manner, 
+		and easily compared. The metrics are scaled such that the maximum rank in the league corresponds to a rank of 1.000.
+		</p>
 		<p>
 		The overall power ranking is thus:
-		$$\begin{align}R_{\text{power}}\quad &=& \alpha_{lsq}R_{lsq} + \alpha_{2sd}R_{2sd} + \alpha_{colley}R_{colley} +  \alpha_{sos}S \ + \nonumber \\
+		$$\begin{align}R_{\text{power}}\quad &=& \alpha_{lsq}R_{lsq} + \alpha_{2sd}R_{2sd} + \alpha_{colley}R_{colley} +  \alpha_{sos}R_{sos} \ + \nonumber \\
 																	&&	 \alpha_{luck}R_{luck} + \alpha_{cons}R_{cons} + \alpha_{streak}W_{\gt2}
 		\end{align}$$
 		</p>
