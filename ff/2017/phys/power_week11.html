@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="Fantasy Football Power Rankings">
+    <meta name="author" content="Ryne Carbone">
+		<link rel="icon" href="../images/favicon_16.png" sizes="16x16" type="image/png">
+		<link rel="icon" href="../images/favicon_32.png" sizes="32x32" type="image/png">
+		<link rel="icon" href="../images/favicon_64.png" sizes="64x64" type="image/png">
+		<link rel="icon" href="../images/favicon_128.png" sizes="128x128" type="image/png">
+		<link rel='mask-icon' href='../images/favicon.svg' color='#00c1f7'>
+
+    <title>Power Rankings</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap theme -->
+    <link href="../dist/css/bootstrap-theme.min.css" rel="stylesheet">
+    <!-- Sortable datatables -->
+		<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.css">
+    
+		<!-- Custom styles for this template -->
+    <link href="theme.css" rel="stylesheet">
+		<!-- Font Awesome Social Icons -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">Elements of Physical Fantasy</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Power Rankings</a></li>
+            <li><a href="about/index.html">About</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Teams <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+            <li><a href="Bradley_Axen/index.html">Bradley Axen</a></li><li><a href="Felix_Clark/index.html">Felix Clark</a></li><li><a href="Frank_Zhao/index.html">Frank Zhao</a></li><li><a href="Laura_Havener/index.html">Laura Havener</a></li><li><a href="Matt_Anthony/index.html">Matt Anthony</a></li><li><a href="Meghan_Frate/index.html">Meghan  Frate </a></li><li><a href="Rex_Brown/index.html">Rex Brown</a></li><li><a href="Russell_Smith/index.html">Russell Smith</a></li><li><a href="Ryne_Carbone/index.html">Ryne Carbone</a></li><li><a href="Zach_Greene/index.html">Zach Greene</a></li>	
+						</ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container theme-showcase" role="main">
+
+      <div class="jumbotron">
+        <h1>Elements of Physical Fantasy Power Rankings</h1>
+        <p>Because trash talk is better with stats to back it up.</p>
+      </div>
+
+
+      <div class="page-header">
+        <h1>Week 12</h1>
+      </div>
+
+			<div class="col-md-12 bigger">
+				<h3>Playoff Odds</h3>
+				<p>The current playoff standings are:
+				<ol>
+				<li>Laura (Division Winner)</li>
+				<li>Russell (Division Winner)</li>
+				<li>Rex</li>
+				<li>Ryne</li>
+				</ol>
+				</p>
+				
+				<p> The following teams have been eliminated
+				<ul>
+				<li>
+				Meghan</li>
+				<li>
+				Matt
+				</li>
+				</ul>
+				</p>
+
+				<p>In order to predict the outcome of future games, I have fit the recorded scores for a team (up to this week)
+				with a gaussian. Then I simulated the rest of the games in the season 1,000,000 times. In each simulated game, the score of a team is
+				randomly chosen from the fitted distribution. The odds of making the playoffs are the fraction of simulated
+				seasons in which each team makes the playoffs. The expected wins are the expected number of wins for the remaining games. The results are below.</p>
+
+			<div class="row">
+				<div class="col-md-12 table-responsive">
+					<table class="table table-condensed table-striped col-md-6">
+						<thead>
+							<tr>
+								<th>Team</th>
+								<th>Expected Wins</th>
+								<th>Win Division (%)</th>
+								<th>Wild Card (%)</th>
+								<th>Make Playoffs (%)</th>
+							</tr>
+							<tbody>
+<tr><td>      Laura Havener</td><td>	0.490 </td><td>   	65.477 </td><td>        	28.543 </td><td>       	94.021</td></tr>
+ <tr><td>          Rex Brown</td><td>	0.677 </td><td>   	34.523 </td><td>        	46.792 </td><td>       	81.315</td></tr>
+ <tr><td>       Bradley Axen</td><td>	0.600 </td><td>   	18.503 </td><td>        	37.909 </td><td>       	56.412</td></tr>
+ <tr><td>      Russell Smith</td><td>	0.458 </td><td>   	42.855 </td><td>        	13.154 </td><td>       	56.009</td></tr>
+ <tr><td>       Ryne Carbone</td><td>	0.510 </td><td>   	33.189 </td><td>        	20.261 </td><td>       	53.450</td></tr>
+ <tr><td>        Zach Greene</td><td>	0.323 </td><td>   	3.541  </td><td>       	24.349   </td><td>     	27.890</td></tr>
+ <tr><td>        Felix Clark</td><td>	0.534 </td><td>   	0.000  </td><td>       	19.471   </td><td>     	19.471</td></tr>
+ <tr><td>         Frank Zhao</td><td>	0.466 </td><td>   	1.912  </td><td>       	9.521    </td><td>    	11.432</td></tr>
+ <tr><td>       Matt Anthony</td><td>	0.542 </td><td>   	0.000  </td><td>       	0.000    </td><td>    	0.000</td></tr>
+ <tr><td>     Meghan  Frate </td><td>	0.400 </td><td>   	0.000  </td><td>       	0.000    </td><td>    	0.000</td></tr>
+							</tbody>
+						</thead>
+					</table>
+				</div>
+			</div>
+			<p></p>
+			<p></p>
+			<p>The odds of winning the division and of getting a wild card spot are plotted below as a function of the number of simulated
+			seasons.</p>
+			<div class='col-md-12'><img src="week11/playoff_odds.png" class="img-responsive" alt="playoff_odds by sim">
+			</div>
+			</div>
+
+      <div class="row">
+        <div class="col-md-12 table-responsive">
+          <table id="power_table" class="table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Owner</th>
+                <th>Record</th>
+								<th>Power</th>
+                <th>LSQ</th>
+                <th>2SD</th>
+                <th>Colley</th>
+                <th>SOS</th>
+                <th>Luck</th>
+                <th>Tier</th>
+              </tr>
+            </thead>
+            <tbody>
+						<tr><td>1</td><td>Bradley Axen  <span class="text-success"><span class="glyphicon glyphicon-chevron-up"></span> 1</span></td><td>6-5</td><td>93.891</td><td>0.952</td><td>0.965</td><td>0.951</td><td>1.000</td><td>0.871</td><td>1</td></tr><tr><td>2</td><td>Rex Brown  <span class="text-success"><span class="glyphicon glyphicon-chevron-up"></span> 3</span></td><td>6-5</td><td>93.792</td><td>0.930</td><td>0.918</td><td>0.885</td><td>0.881</td><td>0.940</td><td>1</td></tr><tr><td>3</td><td>Laura Havener  <span class="text-success"><span class="glyphicon glyphicon-chevron-up"></span> 1</span></td><td>7-4</td><td>92.576</td><td>0.965</td><td>0.987</td><td>1.000</td><td>0.869</td><td>0.772</td><td>2</td></tr><tr><td>4</td><td>Zach Greene  <span class="text-success"><span class="glyphicon glyphicon-chevron-up"></span> 3</span></td><td>6-5</td><td>92.570</td><td>1.000</td><td>1.000</td><td>0.943</td><td>0.963</td><td>0.711</td><td>2</td></tr><tr><td>5</td><td>Russell Smith  <span class="text-success"><span class="glyphicon glyphicon-chevron-up"></span> 1</span></td><td>6-5</td><td>92.013</td><td>0.972</td><td>0.883</td><td>0.944</td><td>0.985</td><td>0.836</td><td>2</td></tr><tr><td>6</td><td>Ryne Carbone  <span class="text-danger"><span class="glyphicon glyphicon-chevron-down"></span> 5</span></td><td>6-5</td><td>91.973</td><td>0.967</td><td>0.853</td><td>0.944</td><td>0.987</td><td>0.926</td><td>2</td></tr><tr><td>7</td><td>Frank Zhao  <span class="text-danger"><span class="glyphicon glyphicon-chevron-down"></span> 4</span></td><td>5-6</td><td>90.986</td><td>0.973</td><td>0.742</td><td>0.843</td><td>0.996</td><td>0.947</td><td>2</td></tr><tr><td>8</td><td>Felix Clark</td><td>5-6</td><td>89.902</td><td>0.906</td><td>0.691</td><td>0.777</td><td>0.887</td><td>1.000</td><td>2</td></tr><tr><td>9</td><td>Matt Anthony</td><td>4-7</td><td>86.348</td><td>0.820</td><td>0.549</td><td>0.656</td><td>0.928</td><td>0.948</td><td>3</td></tr><tr><td>10</td><td>Meghan  Frate </td><td>4-7</td><td>85.151</td><td>0.829</td><td>0.539</td><td>0.662</td><td>0.928</td><td>0.919</td><td>3</td></tr>
+          	</tbody>
+					</table>
+        </div>
+      </div>
+
+
+      <div class="page-header">
+        <h1>Metrics</h1>
+      </div>
+      <div class="well">
+      	<table class='table table-borderless'>
+					<tr>
+					  <td><b>Power</b> </td>
+						<td>Final weighted combination of the other metrics</td>
+					</tr>
+					<tr>
+					  <td><b>LSQ</b>  </td>
+      	    <td>Iterative Least Square minimization, comparing predictive ranking difference to score outcome</td>
+					</tr>
+					<tr>
+      			<td><b>2SD</b></td>
+						<td>Two step dominance matrix, recency weighting</td>
+					</tr>
+					<tr>
+      			<td><b>Colley</b></td>
+						<td> Colley matrix ranking, only factors outcome</td>
+					</tr>
+					<tr>
+      			<td><b>SOS</b></td>
+						<td> Relative strength of schedule, based on LSQ rankings</td>
+					</tr>
+      		<tr>
+					  <td><b>Luck</b> </td>
+						<td>Luck ranking boost, factors opponents score and aggregrate wins </td>
+					</tr>
+					<tr>
+						<td><b>Tier</b></td>
+						<td>Clustering by finding minima in Gaussian Kernel Density Estimation
+					</tr>
+				</table>
+			</div>
+		<div class="row">
+				<div class="text-center">
+						<p>Copyright &copy; 2017 Ryne Carbone
+                  <a href="https://www.linkedin.com/in/rynecarbone"><i class="fa fa-linkedin-square fa-icon"></i></a>
+                  <a href="https://github.com/rynecarbone"><i class="fa fa-github-square fa-icon"></i></a>
+							</p>
+				</div>
+		</div>
+		<div id="debug"> </div>    
+		</div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../dist/js/bootstrap.min.js"></script>
+		<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.js"></script>
+		<script src="theme.js"> </script>
+
+  </body>
+</html>
