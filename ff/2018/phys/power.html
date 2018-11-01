@@ -82,6 +82,63 @@
 								 Or just leave the rankings</p> -->
 			</div>
 
+<div class="col-md-12 bigger">
+				<h3>Playoff Odds</h3>
+				<p>The current playoff standings are:
+				<ol>
+				<li>Russell (Division Winner)</li>
+				<li>Laura (Division Winner)</li>
+				<li>Brad (Division Winner)</li>
+				<li>Rex</li>
+				<li>Kate</li>
+				<li>Felix</li>
+				</ol>
+				</p>
+				
+
+				<p>In order to predict the outcome of future games, I have fit the recorded scores for a team (up to this week)
+				with a gaussian. Then I simulated the rest of the games in the season 1,000,000 times. In each simulated game, the score of a team is
+				randomly chosen from the fitted distribution. The odds of making the playoffs are the fraction of simulated
+				seasons in which each team makes the playoffs. The expected wins are the expected number of wins for the remaining games. The results are below.</p>
+
+			<div class="row">
+				<div class="col-md-12 table-responsive">
+					<table class="table table-condensed table-striped col-md-6">
+						<thead>
+							<tr>
+								<th>Team</th>
+								<th>Expected Wins</th>
+								<th>Win Division (%)</th>
+								<th>Wild Card (%)</th>
+								<th>Make Playoffs (%)</th>
+							</tr>
+							<tbody>
+ <tr><td>      Russell Smith</td><td>	4.351 </td><td>   	98.528 </td><td>        1.462 </td><td>       	99.990</td></tr>
+<tr><td>      Laura Havener</td><td>	4.428 </td><td>   	97.252 </td><td>        2.748 </td><td>       	100.00</td></tr>
+ <tr><td>          Rex Brown</td><td>	3.342 </td><td>   	2.748 </td><td>        	95.417 </td><td>       	98.165</td></tr>
+ <tr><td>       Bradley Axen</td><td>	3.514 </td><td>   	97.773 </td><td>        0.618 </td><td>       	98.391</td></tr>
+ <tr><td>       Kate Reed   </td><td>	2.416 </td><td>   	0.919 </td><td>        	78.826 </td><td>       	77.745</td></tr>
+ <tr><td>        Felix Clark</td><td>	1.835 </td><td>   	0.319  </td><td>       	48.650   </td><td>     	48.969</td></tr>
+ <tr><td>         Frank Zhao</td><td>	2.799 </td><td>   	0.234  </td><td>       	69.071    </td><td>    	69.305</td></tr>
+ <tr><td>        Zach Greene</td><td>	2.028 </td><td>   	1.848  </td><td>       	3.759   </td><td>     	5.607</td></tr>
+ <tr><td>       Matt Anthony</td><td>	1.674 </td><td>   	0.346  </td><td>       	1.110    </td><td>    	1.456</td></tr>
+ <tr><td>       Ryne Carbone</td><td>	1.388 </td><td>   	0.000 </td><td>        	0.276 </td><td>       	0.276</td></tr>
+ <tr><td>     Meghan  Frate </td><td>	1.566 </td><td>   	0.033  </td><td>       	0.063    </td><td>    	0.096</td></tr>
+ <tr><td>  Marisa Baglaneas </td><td>	0.659 </td><td>   	0.000  </td><td>       	0.000    </td><td>    	0.000</td></tr>
+							</tbody>
+						</thead>
+					</table>
+				</div>
+			</div>
+			<p></p>
+			<p></p>
+			<p>The odds of winning the division and of getting a wild card spot are plotted below as a function of the number of simulated
+			seasons.</p>
+			<div class='col-md-12'><img src="week8/playoff_odds.png" class="img-responsive" alt="playoff_odds by sim">
+			</div>
+			</div>
+
+
       <div class="row">
         <div class="col-md-12 table-responsive">
           <table id="power_table" class="table">
