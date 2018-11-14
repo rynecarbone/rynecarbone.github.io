@@ -73,29 +73,24 @@
 
 
       <div class="page-header">
-        <h1>Week 10</h1>
+        <h1>Week 11</h1>
       </div>
 
-
 			<div class="col-md-12 bigger">
-				<h3>FUN FACT ALERT</h3>
-				<p>Average Points Allowed (PA) (excluding Adam's team): <b>1,264.3 &#177; 25.5</b>
-				<br>Distance from highest PA to second-fewest PA: <b> 77.5</b>
-				<br>Distance from second-fewest PA to Adam's PA:<span style="color:red"> <b>167.8</b></span></p>
-
-<h3>Playoff Odds</h3>
-				<p>The current playoff standings are:
+		
+	<p>The current playoff standings are:
 				<ol>
 				<li>Adam (Clinched Playoffs)</li>
 				<li>Ryne</li>
 				<li>JP</li>
-				<li>Steve</li>
+				<li>Brian</li>
 				</ol>
 				</p>
-				
+
 				<p>Currently eliminated Teams:
 				<ul>
 				<li>Jeff</li>
+				<li>Jordan</li>
 				</ul>
 				</p>
 
@@ -104,35 +99,31 @@
 				with a gaussian. Then I simulated the rest of the games in the season 1,000,000 times. In each simulated game, the score of a team is
 				randomly chosen from the fitted distribution. The odds of making the playoffs are the fraction of simulated
 				seasons in which each team makes the playoffs. The expected wins are the expected number of wins for the remaining games. The results are below.</p>
-			<div class="row">
-			<div class="col-md-12 table-responsive">
-<table class="table table-condensed table-striped col-md-6">
-<thead>
-<tr>
-<th>Team	</th><th>Exp. Wins</th><th>	Div. Winner (%)</th>	<th>Wild Card (%)</th><th>	Make Playoffs (%)</th>
-</tr>
-</thead>
-<tbody>
-<tr><td>      Adam Kachelski</td><td>	2.685</td><td>    	98.263 </td><td>        1.737  </td><td>      	100.000</td></tr>
-<tr><td>        Ryne Carbone</td><td>	2.596</td><td>    	1.737  </td><td>       	98.263 </td><td>       	100.000</td></tr>
-<tr><td>         John Cronin</td><td>	1.414</td><td>    	0.000  </td><td>       	76.683 </td><td>       	76.683 </td></tr>
-<tr><td>         Steve Kamke</td><td>	1.634</td><td>    	0.000  </td><td>       	64.997 </td><td>       	64.997 </td></tr>
-<tr><td>           Chris Pom</td><td>	1.137</td><td>    	0.000  </td><td>       	19.868 </td><td>       	19.868 </td></tr>
-<tr><td>       Brian Kohlman</td><td>	2.377</td><td>    	0.000  </td><td>       	37.304 </td><td>       	37.304 </td></tr>
-<tr><td>       Monica Cooley</td><td>	1.380</td><td>    	0.000  </td><td>       	1.148  </td><td>      	1.148  </td></tr>
-<tr><td>        Jordan Hardy</td><td>	0.843</td><td>    	0.000  </td><td>       	0.000  </td><td>      	0.000  </td></tr>
-<tr><td>      Stuart Frazier</td><td>	0.197</td><td>    	0.000  </td><td>       	0.000  </td><td>      	0.000  </td></tr>
-<tr><td>         Jeff Schulz</td><td>	0.738</td><td>    	0.000  </td><td>       	0.000  </td><td>      	0.000  </td></tr>
-</table>
-</div>
-<p></p>
+
+		<div class="row">
+<div class="col-md-12 table-responsive">
+<table class="table table-condensed table-striped col-md-6"><thead><tr>
+<th>								Team	</th><th>Exp. Wins	</th><th>Div. Winner (%)</th><th>	Wild Card (%)	</th><th>Make Playoffs (%)</th></tr></thead>
+<tr><td>      Adam Kachelski</td><td>	1.723 </td><td>   	98.544 </td><td>        	1.456 </td><td>    	100.000</td></tr>
+<tr><td>        Ryne Carbone</td><td>	1.771 </td><td>   	1.456  </td><td>       	98.544  </td><td>    	100.000</td></tr>
+<tr><td>         John Cronin</td><td>	1.186 </td><td>   	0.000  </td><td>       	79.516  </td><td>    	79.516 </td></tr>
+<tr><td>       Brian Kohlman</td><td>	1.515 </td><td>   	0.000  </td><td>       	77.358  </td><td>    	77.358 </td></tr>
+<tr><td>         Steve Kamke</td><td>	0.769 </td><td>   	0.000  </td><td>       	30.721  </td><td>    	30.721 </td></tr>
+<tr><td>       Monica Cooley</td><td>	0.953 </td><td>   	0.000  </td><td>       	6.562   </td><td>     	6.562</td></tr>
+<tr><td>           Chris Pom</td><td>	0.517 </td><td>   	0.000  </td><td>       	5.842   </td><td>     	5.842</td></tr>
+<tr><td>      Stuart Frazier</td><td>	0.140 </td><td>   	0.000  </td><td>       	0.000   </td><td>     	0.000</td></tr>
+<tr><td>        Jordan Hardy</td><td>	0.882 </td><td>   	0.000  </td><td>       	0.000   </td><td>     	0.000</td></tr>
+<tr><td>         Jeff Schulz</td><td>	0.544 </td><td>   	0.000  </td><td>       	0.000   </td><td>     	0.000</td></tr>
+				 </table> </div>
+				 <p></p>
 			<p></p>
 			<p>The odds of winning the division and of getting a wild card spot are plotted below as a function of the number of simulated
 			seasons. </p>
-			<div class='col-md-12'><img src="week9/playoff_odds.png" class="img-responsive" alt="playoff_odds by sim">
+			<div class='col-md-12'><img src="week10/playoff_odds.png" class="img-responsive" alt="playoff_odds by sim">
 			</div>
-			</div>
-
+			</div>	
+			
+			
 			</div>
 
       <div class="row">
@@ -155,7 +146,7 @@
               </tr>
             </thead>
             <tbody>
-						<tr><td>1</td><td>Adam Kachelski</td><td>9-0</td><td>96.534</td><td>1.000</td><td>1.000</td><td>1.000</td><td>0.815</td><td>0.818</td><td>0.711</td><td>0.960</td><td>1</td></tr><tr><td>2</td><td>Ryne Carbone</td><td>7-2</td><td>94.177</td><td>0.925</td><td>0.761</td><td>0.810</td><td>0.827</td><td>0.853</td><td>0.873</td><td>1.000</td><td>1</td></tr><tr><td>3</td><td>John Cronin</td><td>6-3</td><td>87.331</td><td>0.842</td><td>0.620</td><td>0.714</td><td>0.556</td><td>0.887</td><td>0.778</td><td>0.818</td><td>2</td></tr><tr><td>4</td><td>Steve Kamke  <span class="text-success"><span class="glyphicon glyphicon-chevron-up"></span> 2</span></td><td>5-4</td><td>87.132</td><td>0.826</td><td>0.473</td><td>0.619</td><td>0.568</td><td>0.893</td><td>0.848</td><td>0.873</td><td>2</td></tr><tr><td>5</td><td>Chris Pom  <span class="text-danger"><span class="glyphicon glyphicon-chevron-down"></span> 1</span></td><td>5-4</td><td>83.309</td><td>0.785</td><td>0.483</td><td>0.619</td><td>0.432</td><td>0.908</td><td>0.742</td><td>0.826</td><td>3</td></tr><tr><td>6</td><td>Brian Kohlman  <span class="text-danger"><span class="glyphicon glyphicon-chevron-down"></span> 1</span></td><td>4-5</td><td>82.725</td><td>0.745</td><td>0.354</td><td>0.524</td><td>0.568</td><td>0.921</td><td>0.958</td><td>0.825</td><td>3</td></tr><tr><td>7</td><td>Monica Cooley</td><td>4-5</td><td>81.358</td><td>0.693</td><td>0.391</td><td>0.524</td><td>0.506</td><td>0.938</td><td>0.911</td><td>0.773</td><td>3</td></tr><tr><td>8</td><td>Jordan Hardy</td><td>2-7</td><td>68.681</td><td>0.416</td><td>0.200</td><td>0.333</td><td>0.321</td><td>0.998</td><td>1.000</td><td>0.724</td><td>4</td></tr><tr><td>9</td><td>Stuart Frazier</td><td>2-7</td><td>66.196</td><td>0.404</td><td>0.247</td><td>0.333</td><td>0.235</td><td>1.000</td><td>0.853</td><td>0.675</td><td>4</td></tr><tr><td>10</td><td>Jeff Schulz</td><td>1-8</td><td>59.716</td><td>0.404</td><td>0.066</td><td>0.238</td><td>0.160</td><td>1.000</td><td>0.967</td><td>0.699</td><td>5</td></tr>
+						<tr><td>1</td><td>Adam Kachelski</td><td>10-0</td><td>96.653</td><td>1.000</td><td>1.000</td><td>1.000</td><td>0.822</td><td>0.716</td><td>0.685</td><td>0.963</td><td>1</td></tr><tr><td>2</td><td>Ryne Carbone</td><td>8-2</td><td>94.831</td><td>0.943</td><td>0.841</td><td>0.849</td><td>0.811</td><td>0.819</td><td>0.803</td><td>1.000</td><td>1</td></tr><tr><td>3</td><td>John Cronin</td><td>6-4</td><td>86.108</td><td>0.826</td><td>0.568</td><td>0.685</td><td>0.522</td><td>0.897</td><td>0.751</td><td>0.816</td><td>2</td></tr><tr><td>4</td><td>Monica Cooley  <span class="text-success"><span class="glyphicon glyphicon-chevron-up"></span> 3</span></td><td>5-5</td><td>85.431</td><td>0.765</td><td>0.490</td><td>0.575</td><td>0.533</td><td>0.854</td><td>0.831</td><td>0.795</td><td>2</td></tr><tr><td>5</td><td>Brian Kohlman  <span class="text-success"><span class="glyphicon glyphicon-chevron-up"></span> 1</span></td><td>5-5</td><td>83.928</td><td>0.772</td><td>0.410</td><td>0.548</td><td>0.611</td><td>0.787</td><td>0.890</td><td>0.874</td><td>2</td></tr><tr><td>6</td><td>Steve Kamke  <span class="text-danger"><span class="glyphicon glyphicon-chevron-down"></span> 2</span></td><td>5-5</td><td>83.583</td><td>0.785</td><td>0.431</td><td>0.562</td><td>0.544</td><td>0.802</td><td>0.838</td><td>0.872</td><td>2</td></tr><tr><td>7</td><td>Chris Pom  <span class="text-danger"><span class="glyphicon glyphicon-chevron-down"></span> 2</span></td><td>5-5</td><td>81.164</td><td>0.751</td><td>0.432</td><td>0.575</td><td>0.400</td><td>0.862</td><td>0.719</td><td>0.825</td><td>2</td></tr><tr><td>8</td><td>Stuart Frazier  <span class="text-success"><span class="glyphicon glyphicon-chevron-up"></span> 1</span></td><td>3-7</td><td>74.400</td><td>0.535</td><td>0.348</td><td>0.397</td><td>0.267</td><td>0.914</td><td>0.744</td><td>0.717</td><td>3</td></tr><tr><td>9</td><td>Jordan Hardy  <span class="text-danger"><span class="glyphicon glyphicon-chevron-down"></span> 1</span></td><td>2-8</td><td>69.754</td><td>0.448</td><td>0.200</td><td>0.342</td><td>0.333</td><td>1.000</td><td>1.000</td><td>0.730</td><td>4</td></tr><tr><td>10</td><td>Jeff Schulz</td><td>1-9</td><td>57.833</td><td>0.404</td><td>0.057</td><td>0.219</td><td>0.144</td><td>0.929</td><td>0.928</td><td>0.700</td><td>5</td></tr>
           	</tbody>
 					</table>
         </div>
