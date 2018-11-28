@@ -73,19 +73,21 @@
 
 
       <div class="page-header">
-        <h1>Week 12</h1>
+        <h1>Week 13</h1>
       </div>
 
+		
 			<div class="col-md-12 bigger">
-		<h3>Playoff Odds</h3>
-				<p>The current playoff standings are:
+			<h3>Playoff Odds</h3>
+		
+<p>The current playoff standings are:
 				<ol>
 				<li>Laura       Div Winner (Brahe's Bladder)</li>
 				<li>Russell      Div Winner (Tesla's Pigeon)</li>
 				<li>Brad       Div Winner (Galileo's Finger)</li>
 				<li>Felix</li>
 				<li>Rex</li>
-				<li>Frank</li>
+				<li>Kate</li>
 				</ol>
 				</p>
 
@@ -99,24 +101,25 @@
 				<p>In order to predict the outcome of future games, I have fit the recorded scores for a team (up to this week)
 				with a gaussian. Then I simulated the rest of the games in the season 1,000,000 times. In each simulated game, the score of a team is
 				randomly chosen from the fitted distribution. The odds of making the playoffs are the fraction of simulated
-				seasons in which each team makes the playoffs. The expected wins are the expected number of wins for the remaining games. The results are below.</p>	
-			
-			<div class="row">
+				seasons in which each team makes the playoffs. The expected wins are the expected number of wins for the remaining games. The results are below.</p>
+
+
+	<div class="row">
 <div class="col-md-12 table-responsive">
 <table class="table table-condensed table-striped col-md-6"><thead><tr>
 <th>								Team	</th><th>Exp. Wins	</th><th>Div. Winner (%)</th><th>	Wild Card (%)	</th><th>Make Playoffs (%)</th></tr></thead>
-<tr><td>       Laura Havener</td><td>	1.239 </td><td>   	100.000 </td><td>      	0.000  </td><td>      	100.000</td></tr>
-<tr><td>       Russell Smith</td><td>	1.629 </td><td>   	98.446  </td><td>      	1.554  </td><td>      	100.000</td></tr>
-<tr><td>           Rex Brown</td><td>	1.332 </td><td>   	0.000   </td><td>      	96.579 </td><td>      	96.579 </td></tr>
-<tr><td>        Bradley Axen</td><td>	1.232 </td><td>   	81.974  </td><td>      	3.176  </td><td>      	85.150 </td></tr>
-<tr><td>         Felix Clark</td><td>	0.631 </td><td>   	1.554   </td><td>      	72.722 </td><td>      	74.275 </td></tr>
-<tr><td>          Frank Zhao</td><td>	1.126 </td><td>   	0.000   </td><td>      	73.736 </td><td>      	73.736 </td></tr>
-<tr><td>           Kate Reed</td><td>	0.614 </td><td>   	0.000   </td><td>      	24.780 </td><td>      	24.780 </td></tr>
-<tr><td>         Zach Greene</td><td>	1.076 </td><td>   	9.791   </td><td>      	8.522  </td><td>      	18.313 </td></tr>
-<tr><td>        Ryne Carbone</td><td>	1.154 </td><td>   	0.000   </td><td>      	16.251 </td><td>      	16.251 </td></tr>
-<tr><td>        Matt Anthony</td><td>	0.905 </td><td>   	8.235   </td><td>      	2.680  </td><td>      	10.915 </td></tr>
-<tr><td>      Meghan  Frate </td><td>	0.787 </td><td>   	0.000   </td><td>      	0.000  </td><td>      	0.000  </td></tr>
-<tr><td>    Marisa Baglaneas</td><td>	0.275 </td><td>   	0.000   </td><td>      	0.000  </td><td>      	0.000  </td></tr>
+<tr><td>       Laura Havener</td><td>	0.557 </td><td>  	100.000   </td><td>      	0.000  </td><td>      	100.000 </td></tr>
+<tr><td>       Russell Smith</td><td>	0.822 </td><td>   	82.239  </td><td>      	17.761 </td><td>       	100.000 </td></tr>
+<tr><td>         Felix Clark</td><td>	0.178 </td><td>   	17.761  </td><td>      	82.239 </td><td>       	100.000 </td></tr>
+<tr><td>           Rex Brown</td><td>	0.443 </td><td>   	0.000   </td><td>      	98.587 </td><td>       	98.587  </td></tr>
+<tr><td>        Bradley Axen</td><td>	0.638 </td><td>   	70.311  </td><td>      	0.085  </td><td>      	70.396  </td></tr>
+<tr><td>           Kate Reed</td><td>	0.486 </td><td>   	0.000   </td><td>      	48.621 </td><td>       	48.621  </td></tr>
+<tr><td>        Ryne Carbone</td><td>	0.817 </td><td>   	0.000   </td><td>      	28.776 </td><td>       	28.776  </td></tr>
+<tr><td>        Matt Anthony</td><td>	0.522 </td><td>   	26.571  </td><td>      	0.117  </td><td>      	26.687  </td></tr>
+<tr><td>          Frank Zhao</td><td>	0.514 </td><td>   	0.000   </td><td>      	23.814 </td><td>       	23.814  </td></tr>
+<tr><td>         Zach Greene</td><td>	0.478 </td><td>   	3.119   </td><td>      	0.000  </td><td>      	3.119   </td></tr>
+<tr><td>      Meghan  Frate </td><td>	0.362 </td><td>   	0.000   </td><td>      	0.000  </td><td>      	0.000   </td></tr>
+<tr><td>    Marisa Baglaneas</td><td>	0.183 </td><td>   	0.000   </td><td>      	0.000  </td><td>      	0.000   </td></tr>
 </table> </div>
 			</div>
 			
@@ -143,7 +146,7 @@
               </tr>
             </thead>
             <tbody>
-						<tr><td>1</td><td>Laura Havener  <span class="text-success"><span class="glyphicon glyphicon-chevron-up"></span> 1</span></td><td>9-2</td><td>95.344</td><td>1.000</td><td>1.000</td><td>1.000</td><td>0.686</td><td>0.792</td><td>0.597</td><td>0.973</td><td>1</td></tr><tr><td>2</td><td>Russell Smith  <span class="text-danger"><span class="glyphicon glyphicon-chevron-down"></span> 1</span></td><td>8-3</td><td>93.959</td><td>0.967</td><td>0.957</td><td>0.945</td><td>0.826</td><td>0.891</td><td>0.808</td><td>1.000</td><td>1</td></tr><tr><td>3</td><td>Felix Clark  <span class="text-success"><span class="glyphicon glyphicon-chevron-up"></span> 1</span></td><td>7-4</td><td>91.780</td><td>0.933</td><td>0.857</td><td>0.866</td><td>0.545</td><td>0.931</td><td>0.666</td><td>0.854</td><td>2</td></tr><tr><td>4</td><td>Rex Brown  <span class="text-danger"><span class="glyphicon glyphicon-chevron-down"></span> 1</span></td><td>6-5</td><td>88.880</td><td>0.889</td><td>0.615</td><td>0.729</td><td>0.645</td><td>0.861</td><td>0.778</td><td>0.917</td><td>3</td></tr><tr><td>5</td><td>Frank Zhao  <span class="text-success"><span class="glyphicon glyphicon-chevron-up"></span> 2</span></td><td>6-5</td><td>88.824</td><td>0.917</td><td>0.715</td><td>0.752</td><td>0.512</td><td>0.905</td><td>0.647</td><td>0.922</td><td>3</td></tr><tr><td>6</td><td>Kate Reed  <span class="text-danger"><span class="glyphicon glyphicon-chevron-down"></span> 1</span></td><td>6-5</td><td>87.625</td><td>0.857</td><td>0.667</td><td>0.753</td><td>0.488</td><td>0.935</td><td>0.684</td><td>0.850</td><td>3</td></tr><tr><td>7</td><td>Bradley Axen  <span class="text-danger"><span class="glyphicon glyphicon-chevron-down"></span> 1</span></td><td>6-5</td><td>87.471</td><td>0.901</td><td>0.599</td><td>0.713</td><td>0.529</td><td>0.849</td><td>0.676</td><td>0.913</td><td>3</td></tr><tr><td>8</td><td>Ryne Carbone</td><td>5-6</td><td>87.341</td><td>0.782</td><td>0.625</td><td>0.637</td><td>0.479</td><td>0.924</td><td>0.802</td><td>0.859</td><td>3</td></tr><tr><td>9</td><td>Matt Anthony  <span class="text-success"><span class="glyphicon glyphicon-chevron-up"></span> 1</span></td><td>5-6</td><td>86.472</td><td>0.835</td><td>0.609</td><td>0.594</td><td>0.430</td><td>0.826</td><td>0.699</td><td>0.902</td><td>3</td></tr><tr><td>10</td><td>Zach Greene  <span class="text-danger"><span class="glyphicon glyphicon-chevron-down"></span> 1</span></td><td>5-6</td><td>85.920</td><td>0.843</td><td>0.604</td><td>0.670</td><td>0.380</td><td>0.974</td><td>0.677</td><td>0.965</td><td>3</td></tr><tr><td>11</td><td>Meghan  Frate </td><td>2-9</td><td>71.769</td><td>0.579</td><td>0.153</td><td>0.325</td><td>0.331</td><td>0.927</td><td>1.000</td><td>0.863</td><td>4</td></tr><tr><td>12</td><td>Marisa Baglaneas</td><td>1-10</td><td>61.347</td><td>0.499</td><td>0.138</td><td>0.269</td><td>0.149</td><td>1.000</td><td>0.855</td><td>0.561</td><td>5</td></tr>
+						<tr><td>1</td><td>Russell Smith  <span class="text-success"><span class="glyphicon glyphicon-chevron-up"></span> 1</span></td><td>8-4</td><td>93.940</td><td>0.960</td><td>0.920</td><td>0.943</td><td>0.818</td><td>0.900</td><td>0.951</td><td>1.000</td><td>1</td></tr><tr><td>2</td><td>Felix Clark  <span class="text-success"><span class="glyphicon glyphicon-chevron-up"></span> 1</span></td><td>8-4</td><td>93.675</td><td>0.964</td><td>1.000</td><td>0.961</td><td>0.545</td><td>0.942</td><td>0.729</td><td>0.854</td><td>1</td></tr><tr><td>3</td><td>Laura Havener  <span class="text-danger"><span class="glyphicon glyphicon-chevron-down"></span> 2</span></td><td>9-3</td><td>93.368</td><td>1.000</td><td>0.990</td><td>1.000</td><td>0.652</td><td>0.823</td><td>0.693</td><td>0.968</td><td>1</td></tr><tr><td>4</td><td>Ryne Carbone  <span class="text-success"><span class="glyphicon glyphicon-chevron-up"></span> 4</span></td><td>6-6</td><td>91.345</td><td>0.855</td><td>0.833</td><td>0.748</td><td>0.523</td><td>0.942</td><td>0.881</td><td>0.869</td><td>2</td></tr><tr><td>5</td><td>Kate Reed  <span class="text-success"><span class="glyphicon glyphicon-chevron-up"></span> 1</span></td><td>7-5</td><td>90.603</td><td>0.915</td><td>0.831</td><td>0.860</td><td>0.523</td><td>0.941</td><td>0.771</td><td>0.864</td><td>2</td></tr><tr><td>6</td><td>Rex Brown  <span class="text-danger"><span class="glyphicon glyphicon-chevron-down"></span> 2</span></td><td>7-5</td><td>90.420</td><td>0.925</td><td>0.711</td><td>0.801</td><td>0.644</td><td>0.832</td><td>0.852</td><td>0.919</td><td>2</td></tr><tr><td>7</td><td>Matt Anthony  <span class="text-success"><span class="glyphicon glyphicon-chevron-up"></span> 2</span></td><td>6-6</td><td>90.343</td><td>0.924</td><td>0.760</td><td>0.698</td><td>0.462</td><td>0.851</td><td>0.772</td><td>0.910</td><td>2</td></tr><tr><td>8</td><td>Frank Zhao  <span class="text-danger"><span class="glyphicon glyphicon-chevron-down"></span> 3</span></td><td>6-6</td><td>89.129</td><td>0.932</td><td>0.696</td><td>0.759</td><td>0.508</td><td>0.923</td><td>0.757</td><td>0.922</td><td>2</td></tr><tr><td>9</td><td>Bradley Axen  <span class="text-danger"><span class="glyphicon glyphicon-chevron-down"></span> 2</span></td><td>6-6</td><td>87.360</td><td>0.893</td><td>0.592</td><td>0.708</td><td>0.492</td><td>0.884</td><td>0.775</td><td>0.910</td><td>3</td></tr><tr><td>10</td><td>Zach Greene</td><td>5-7</td><td>85.641</td><td>0.858</td><td>0.607</td><td>0.644</td><td>0.348</td><td>0.933</td><td>0.757</td><td>0.962</td><td>3</td></tr><tr><td>11</td><td>Meghan  Frate </td><td>3-9</td><td>77.179</td><td>0.684</td><td>0.298</td><td>0.417</td><td>0.333</td><td>0.929</td><td>0.976</td><td>0.863</td><td>4</td></tr><tr><td>12</td><td>Marisa Baglaneas</td><td>1-11</td><td>63.634</td><td>0.543</td><td>0.142</td><td>0.273</td><td>0.152</td><td>1.000</td><td>1.000</td><td>0.564</td><td>5</td></tr>
           	</tbody>
 					</table>
         </div>
